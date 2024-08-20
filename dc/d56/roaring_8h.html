@@ -231,6 +231,8 @@ Functions</h2></td></tr>
 <tr class="separator:abf071a021966c2eb8da4473a9dabaad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4744b619dba146ffa85bfd383de44336"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d56/roaring_8h.html#a4744b619dba146ffa85bfd383de44336">roaring_bitmap_range_cardinality</a> (const <a class="el" href="../../dc/d56/roaring_8h.html#a946b719adc4b8027b3d4aeeb63c64fbc">roaring_bitmap_t</a> *r, uint64_t range_start, uint64_t range_end)</td></tr>
 <tr class="separator:a4744b619dba146ffa85bfd383de44336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ae77b21fc4c7799c7b89fc144457bc"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d56/roaring_8h.html#ac0ae77b21fc4c7799c7b89fc144457bc">roaring_bitmap_range_cardinality_closed</a> (const <a class="el" href="../../dc/d56/roaring_8h.html#a946b719adc4b8027b3d4aeeb63c64fbc">roaring_bitmap_t</a> *r, uint32_t range_start, uint32_t range_end)</td></tr>
+<tr class="separator:ac0ae77b21fc4c7799c7b89fc144457bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fa6da5896222a61bb42c692fce03372"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d56/roaring_8h.html#a6fa6da5896222a61bb42c692fce03372">roaring_bitmap_is_empty</a> (const <a class="el" href="../../dc/d56/roaring_8h.html#a946b719adc4b8027b3d4aeeb63c64fbc">roaring_bitmap_t</a> *r)</td></tr>
 <tr class="separator:a6fa6da5896222a61bb42c692fce03372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2916e66c2048b9ae08ef25e80f11e37d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d56/roaring_8h.html#a2916e66c2048b9ae08ef25e80f11e37d">roaring_bitmap_clear</a> (<a class="el" href="../../dc/d56/roaring_8h.html#a946b719adc4b8027b3d4aeeb63c64fbc">roaring_bitmap_t</a> *r)</td></tr>
@@ -456,7 +458,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_uint32_iterator_advance</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01054">1054</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01060">1060</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#aec401e111190871fb95faaa0e4d66757">roaring_uint32_iterator_advance()</a>.</p>
 
@@ -2545,6 +2547,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac0ae77b21fc4c7799c7b89fc144457bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ae77b21fc4c7799c7b89fc144457bc">&#9670;&nbsp;</a></span>roaring_bitmap_range_cardinality_closed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t roaring_bitmap_range_cardinality_closed </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d56/roaring_8h.html#a946b719adc4b8027b3d4aeeb63c64fbc">roaring_bitmap_t</a> *&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>range_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>range_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of elements in the range [range_start, range_end]. </p>
+
+</div>
+</div>
 <a id="a48b73721e801bee831cb7b2872cf0a29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48b73721e801bee831cb7b2872cf0a29">&#9670;&nbsp;</a></span>roaring_bitmap_range_uint32_array()</h2>
 
@@ -3306,7 +3343,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_uint32_iterator_copy</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01100">1100</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01106">1106</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#ace36f119f07f406f54efe51331253359">roaring_uint32_iterator_copy()</a>.</p>
 
@@ -3337,7 +3374,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_iterator_create</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01038">1038</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01044">1044</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#a5aa02a6e9acc580802d02dbbe9087410">roaring_iterator_create()</a>.</p>
 
@@ -3368,7 +3405,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_uint32_iterator_free</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01110">1110</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01116">1116</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#aa879e686552e794ad36d33a9eedece3c">roaring_uint32_iterator_free()</a>.</p>
 
@@ -3409,7 +3446,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_iterator_init</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01007">1007</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01013">1013</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#a45b84c4acc0a65ebf4fa529ee35b3c70">roaring_iterator_init()</a>.</p>
 
@@ -3450,7 +3487,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_iterator_init_last</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01021">1021</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01027">1027</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#a1c2a6c8c7381614389c12406aea38f34">roaring_iterator_init_last()</a>.</p>
 
@@ -3657,7 +3694,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_uint32_iterator_move_equalorlarger</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01086">1086</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01092">1092</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#a523be4d9d334d99a54385cf1b8492602">roaring_uint32_iterator_move_equalorlarger()</a>.</p>
 
@@ -3688,7 +3725,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_uint32_iterator_previous</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01071">1071</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01077">1077</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#a5843d31058d4671164e719c1676a5a2a">roaring_uint32_iterator_previous()</a>.</p>
 
@@ -3735,7 +3772,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>DEPRECATED, use <code>roaring_uint32_iterator_read</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01130">1130</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d56/roaring_8h_source.html#l01136">1136</a> of file <a class="el" href="../../dc/d56/roaring_8h_source.html">roaring.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dc/d56/roaring_8h.html#aa7d6e6919e46905bf7e5ddd824f3eb55">roaring_uint32_iterator_read()</a>.</p>
 
